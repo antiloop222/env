@@ -1,6 +1,4 @@
 echo Type 'phelp' to get help for perso functions
-export PTY_PREFIX=winpty
-echo PTY_PREFIX=${PTY_PREFIX}
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
