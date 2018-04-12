@@ -27,9 +27,9 @@ hp() {
   if [ "$1" == "status" ]; then
     STATUS=$(netstat -an | grep LISTEN | grep 3128 | wc -l)
     if [ $STATUS -gt 0 ]; then
-      echo "Proxy is running..."
+      echo "Heisenberg proxy is running..."
     else
-      echo "Proxy is NOT running..."
+      echo "Heisenberg proxy is NOT running..."
     fi
   fi
 }
