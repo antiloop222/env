@@ -24,6 +24,7 @@ hp() {
   if [ "$1" == "stop" ]; then
     echo Stopping heisenberg proxy...
     ssh -S /tmp/sock-heisenberg -p 443 -l kriss -O exit 37.187.116.136
+    rm -f /tmp/sock-heisenberg
   fi
   if [ "$1" == "status" ]; then
     STATUS=$(netstat -an | grep LISTEN | grep 3128 | wc -l)
