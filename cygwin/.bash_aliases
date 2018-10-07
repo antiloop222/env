@@ -1,10 +1,12 @@
 echo "### Perso functions ########################################"
 echo Type 'phelp' to get help for perso functions
+export PATH=$PATH:~/dev/perso/env/cygwin/bin
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 phelp() {
-  echo Proxy: hp
+  echo 'Heisenberg Proxy:'
+  echo '  hp Manage proxy'
 }
 
 # Proxy 
@@ -18,7 +20,7 @@ hp() {
   fi
   if [ "$1" == "start" ]; then
     echo Starting heisenberg proxy...
-    ssh -o "ProxyCommand java -Xmx64m -cp 'C:\Perso\dev\local\ssl\out\production\ssl' org.antiloop.ssl.SSLTunnel -p 10.43.216.8:8080 - 37.187.116.136:443" -i "C:\Users\cvila\Documents\Perso\Cloud\Nextcloud\Kriss\Serveurs\Kimsufi\ns329449_private.key" -p 443 -l kriss -L 127.0.0.1:3128:127.0.0.1:3128 -S /tmp/sock-heisenberg -M -f -N 37.187.116.136
+    ssh -o "ProxyCommand java -Xmx64m -cp 'C:\Users\cvila\Dev\Perso\local\ssl\out\production\ssl' org.antiloop.ssl.SSLTunnel -p 10.43.216.8:8080 - 37.187.116.136:443" -i "C:\Users\cvila\Documents\Nextcloud\Perso\Serveurs\Kimsufi\ns329449_private.key" -p 443 -l kriss -L 127.0.0.1:3128:127.0.0.1:3128 -S /tmp/sock-heisenberg -M -f -N 37.187.116.136
     echo Proxy started on port 3128
   fi
   if [ "$1" == "stop" ]; then
