@@ -6,12 +6,12 @@ export PATH=$PATH:~/dev/perso/env/cygwin/bin
 
 phelp() {
   echo 'Heisenberg Proxy:'
-  echo '  hp Manage proxy'
+  echo '  hprx Manage Heisenberg HTTP proxy'
 }
 
 # Proxy 
 
-hp() {
+hprx() {
   if [ "$1" == "--help" ]; then
     echo "Manage Heisenberg proxy"
     echo "Usage: hp <COMMAND>"
