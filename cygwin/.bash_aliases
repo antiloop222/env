@@ -1,9 +1,3 @@
-echo "### Perso functions ########################################"
-echo Type 'phelp' to get help for perso functions
-export PATH=$PATH:~/dev/perso/env/cygwin/bin
-
-# -------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 phelp() {
   echo 'Heisenberg Proxy:'
   echo '  hprx Manage Heisenberg HTTP proxy'
@@ -37,3 +31,14 @@ hprx() {
     fi
   fi
 }
+
+# -------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+echo ""
+echo -e '\033[0;36m           ___                /|       __   ___  __   __   __  \033[0m'
+echo -e '\033[0;36m |\/| \ / |__  |\ | \  /     /_|_     |__) |__  |__) /__` /  \ \033[0m'
+echo -e '\033[0;36m |  |  |  |___ | \|  \/        |      |    |___ |  \ .__/ \__/ \033[0m'
+echo ""
+export PATH=$PATH:~/dev/perso/env/cygwin/bin
+alias myenv="source ~/.bashrc"
+echo Type 'phelp' to get help for perso functions
